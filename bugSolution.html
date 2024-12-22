@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is inside a div.
+  </div>
+  <script>
+    //Correct way to select and modify the content of a div.
+    document.getElementById("myDiv").innerHTML = "<p>This is a paragraph.</p>"; //This line is correct because innerHTML sets the HTML content of the element.
+  </script>
+</body>
+</html>
