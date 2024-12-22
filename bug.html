@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is inside a div.
+  </div>
+  <script>
+    //Incorrect way to select and modify the content of a div. This will result in an error.
+    document.getElementById("myDiv").textContent = "This is a test"; //This line is correct. 
+    document.getElementById("myDiv").innerText = "<p>This is a paragraph.</p>"; // This line will cause an error because innerText sets the textual representation of the element's content. When trying to set the innerText to HTML content, the browser will escape HTML tags and insert them as plain text.
+  </script>
+</body>
+</html>
